@@ -1,2 +1,2 @@
-# Imagi-Practice
-Practice exercises from the Imagi app
+# Python Practice
+Practice exercises from Python specifically
