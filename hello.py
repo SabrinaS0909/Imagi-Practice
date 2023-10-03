@@ -151,5 +151,24 @@ if 7 not in container:
 else:
     print("Hey! It's here.")
 # Identity Operators
-# Bitwise Operators
+m = 70
+n = 70
+o = 60
+if m is n:
+    print("They have the same identity")
+else:
+    print("They don't have the same identity")
+if m is o:
+    print("They have the same identity")
+else:
+    print("They don't have the same identity")
+if m is not n:
+    print("They have the same identity")
+else:
+    print("They don't have the same identity")
+if m is not o:
+    print("They have the same identity")
+else:
+    print("They don't have the same identity")
+# Bitwise Operators - https://realpython.com/python-bitwise-operators/
 # Walrus Operators
