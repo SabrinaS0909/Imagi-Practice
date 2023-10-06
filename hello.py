@@ -89,6 +89,7 @@ print(type(dogAgeAsInt))
 """
 
 # Operators
+
 # Arithmetic Operators
 a = 5
 b = 2
@@ -100,7 +101,8 @@ print("The result when multiplying is", a * b)
 print("The result when dividing is", a / b)
 print("The result with modulo is", a % b)
 print("The result when calculating the exponent is", a ** b)
-print("The result with floor division is", a // b)
+print("The result with floor division is", a // b
+
 # Relational/Comparison Operators
 ageOne = 16
 ageTwo = 18
@@ -111,6 +113,7 @@ print(ageOne == requiredAge)
 print(ageOne != requiredAge)
 print(ageTwo >= requiredAge)
 print(ageTwo <= requiredAge)
+
 # Logical Operators
 x = 18
 # One is True, One is False
@@ -128,6 +131,7 @@ print(x > 20 and x == 20)
 print(x < 10 or x != 18)
 print(not (x > 20 and x == 20))
 print(not (x < 10 or x != 18))
+
 # Membership Operators
 container = [1, 2, 3, 4, 5]
 # It's in there.
@@ -150,6 +154,7 @@ if 7 not in container:
     print("It's not here!")
 else:
     print("Hey! It's here.")
+
 # Identity Operators
 m = 70
 n = 70
@@ -170,9 +175,11 @@ if m is not o:
     print("They have the same identity")
 else:
     print("They don't have the same identity")
+
 # Bitwise Operators
 """
 First lets learn conversion, as it's important for bitwise operators.
+*bits = (bi)nary dig(its)*
 I. Number Systems: 
      A. Decimal - Range 0 to 9 (Base 10)
      B. Binary - Range 0 to 1 (Base 2)
@@ -224,9 +231,78 @@ II. Conversion:
                   (1011010)Base 2 -> (90)Base 10
                   *No need in the future to include the digits multiplied by 0*
 """
-# AND &
-
-# OR |
-# NOT ~
+d = 10
+e = 5
+# d(10) in binary = 1010
+# e(5) in binary = 0101
+"""
+AND (&) Bitwise Operator
+      1010   | Compare each column,
+    & 0101   | If both bits are 1, return 1,
+    -------  | else return 0
+      0000   V
+"""
+fBinary = bin(d & e)
+print(fBinary)
+# It returns only one 0 because a single 0 is enough to represent binary 0; even though there are four
+# Also 0b is the prefix that tells us this is in binary
+"""
+Now convert the binary number obtained to decimal
+(0000)Base 2 -> (0)Base 10
+"""
+fDecimal = d & e
+print(fDecimal)
+"""
+OR (|) Bitwise Operator
+     1010   | Compare each column,
+   | 0101   | If any bits are 1, return 1,
+   -------  | else return 0
+     1111   V
+"""
+gBinary = bin(d | e)
+print(gBinary)
+"""
+Now convert the binary number obtained to decimal
+(1111)Base 2 -> (15)Base 10
+"""
+gDecimal = d | e
+print(gDecimal)
+"""
+NOT (~) Bitwise Operator
+     Returns one's complement of a number.
+     d = 10
+     d(10) in binary is 1010
+     But dont forget about the sign bit!
+     So because 10 is a positive number, add a 0 to the start of the binary number.
+     If it were negative, you would add a 1 instead.
+     So actually, d = 01010
+     which makes ~d = ~01010
+     which equates to 10101
+     Now identify the decimal equivalent to 10101
+     However, keep in mind the sign bit, it is -2 to the power of its positional weight
+     So ( -2^4 )0101
+     But for whatever reason, it is still negative, even though it's an even exponent, for whatever reason:
+     Soooo... -16 + 4 + 1 = -11
+"""
+hBinary = bin(~d)
+print(hBinary)
+hDecimal = ~d
+print(hDecimal)
 # XOR ^
+j = 10
+k = 9
+"""
+     1010   | Compare each column,
+   ^ 1001   | If ONLY one of the bits are 1, return 1,
+   -------  | else return 0
+     0011   V
+
+(0011)Base 2 -> (3)Base 10
+Again, the console won't care about the 0s
+"""
+iBinary = bin(j ^ k)
+print(iBinary)
+iDecimal = j ^ k
+print(iDecimal)
+
 # Walrus Operators - assign variables in the middle of expressions
