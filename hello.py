@@ -170,5 +170,63 @@ if m is not o:
     print("They have the same identity")
 else:
     print("They don't have the same identity")
-# Bitwise Operators - https://realpython.com/python-bitwise-operators/
-# Walrus Operators
+# Bitwise Operators
+"""
+First lets learn conversion, as it's important for bitwise operators.
+I. Number Systems: 
+     A. Decimal - Range 0 to 9 (Base 10)
+     B. Binary - Range 0 to 1 (Base 2)
+     C. Octal - Range 0 to 7 (Base 8)
+     D. Hexadecimal - Range 0 to 9, then 10 to 15 are represented by letters A to F (Base 16)
+
+II. Conversion:
+     A. Decimal -> Binary:
+          1. Steps:
+               a) Divide the number in question by 2 (the base);
+               b) Write down the remainder and divide the quotient by 2 again;
+               c) Repeat this until your quotient reaches 0.
+               d) The remainders, from last to first, is your new binary number.
+          2. Example:
+               a) (25)Base 10 to ( )Base 2 *Bases are usually represented as subscripts*
+                  25/2 = 12 with remainder 1
+                  12/2 = 6 with remainder 0
+                  6/2 = 3 with remainder 0
+                  3/2 = 1 with remainder 1
+                  1/2 = 0 with remainder 1
+                  (25)Base 10 => (11001)Base 2
+               b) (90)Base 10 to ( )Base 2
+                  90/2 = 45 with remainder 0
+                  45/2 = 22 with remainder 1
+                  22/2 = 11 with remainder 0
+                  11/2 = 5 with remainder 1
+                  5/2 = 2 with remainder 1
+                  2/2 = 1 with remainder 0
+                  1/2 = 0 with remainder 1
+                  (25)Base 10 => (1011010)Base 2
+     B. Binary -> Decimal:
+          1. Steps:
+               a) Separate the individual digits of the number.
+               b) Give each number their positional weight, from right to left.
+                    i. Starting from 0, assign increments of 1 to each digit. Don't forget, right to left!
+               c) Multiply each digit by the Base number to the power of their positional weight.
+               d) Add it all up.
+          2. Example:
+               a) (1011010)Base 2 to ( )Base 10
+                  From right to left:
+                  0 x 2^0 = 0 x 1 = 0
+                  1 x 2^1 = 1 x 2 = 2
+                  0 x 2^2 = 0 x 4 = 0
+                  1 x 2^3 = 1 x 8 = 8
+                  1 x 2^4 = 1 x 16 = 16
+                  0 x 2^5 = 0 x 32 = 0
+                  1 x 2^6 = 1 x 64 = 64
+                  0 + 2 + 0 + 8 + 16 + 0 + 64 = 90
+                  (1011010)Base 2 -> (90)Base 10
+                  *No need in the future to include the digits multiplied by 0*
+"""
+# AND &
+
+# OR |
+# NOT ~
+# XOR ^
+# Walrus Operators - assign variables in the middle of expressions
