@@ -101,7 +101,7 @@ print("The result when multiplying is", a * b)
 print("The result when dividing is", a / b)
 print("The result with modulo is", a % b)
 print("The result when calculating the exponent is", a ** b)
-print("The result with floor division is", a // b
+print("The result with floor division is", a // b)
 
 # Relational/Comparison Operators
 ageOne = 16
@@ -306,3 +306,6 @@ iDecimal = j ^ k
 print(iDecimal)
 
 # Walrus Operators - assign variables in the middle of expressions
+withoutWalrus = "This has to be called separately."
+print(withoutWalrus)
+print(withWalrus := "This can be called together, with the assignment.")
