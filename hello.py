@@ -67,7 +67,7 @@ print(type(6 > 4))
 print(type(4 > 6))
 print(type(True))
 print(type(False))
-"""
+
 # using the function: input()
 username = input("Please enter your name:")
 print(username)
@@ -86,9 +86,8 @@ print(type(dogAge))
 dogAgeAsInt = int(input("Please enter your dog's age:"))
 print(dogAgeAsInt)
 print(type(dogAgeAsInt))
-"""
 
-# Operators
+# Lesson 3: Operators
 
 # Arithmetic Operators
 a = 5
@@ -309,3 +308,54 @@ print(iDecimal)
 withoutWalrus = "This has to be called separately."
 print(withoutWalrus)
 print(withWalrus := "This can be called together, with the assignment.")
+
+# Lesson 4: Operators
+
+# If statement
+number = int(input("Please type the number 3: "))
+if number == 3:
+    print("Good job.")
+# If-else statement
+favAnimal = input("What's your favorite animal?")
+if favAnimal == "dog":
+    print("Me too!!!")
+else:
+    print("Oh, that's cool I guess.")
+# If-elif-else statement
+activity = input("There's a lake for swimming, a tree that you can climb, or you can choose to go home. Which do you "
+                 "decide to do?")
+if activity == "swim":
+    print("You swim in the beautifully clear water. It feels cool and you feel refreshed.")
+elif activity == "climb":
+    print("The tree is tall, but you climb to one of the highest branches. You feel on top of the world.")
+elif activity == "go home":
+    print("You decide you're done with being outside, and go home.")
+else:
+    print("Please choose one of the mentioned activities.")
+# Nested If-else statement
+yesOrNo = input("A shifty man approaches you and offers several things to buy off of him. Choose to say Yes or No.")
+if yesOrNo == "Yes":
+    itemChoice = input("He asks with a gravely voice, 'What're ya buyin'?' He shows you a health potion, "
+                       "a mana potion, and a weapon upgrade.")
+    if itemChoice == "health potion":
+        print("You buy the health potion!")
+        takeHealth = input("Take it now?")
+        if takeHealth == "Yes":
+            print("You drink the health potion, and feel a thousand times better. Your wounds are now much less severe.")
+        else:
+            print("You put the health potion away in your backpack for later.")
+    elif itemChoice == "mana potion":
+        print("You buy the mana potion!")
+        takeMana = input("Take it now?")
+        if takeMana == "Yes":
+            print("You drink the mana potion, and feel as though you can conjure several more spells before resting.")
+        else:
+            print("You put the mana potion away in your backpack for later.")
+    elif itemChoice == "weapon upgrade":
+        print("You buy the weapon upgrade! Your dingy sword becomes a steel sword, and you gain +5 in attack.")
+    else:
+        print("You decide the man has nothing you want, and you don't buy anything from him.")
+elif yesOrNo == "No":
+    print("Creeped out by the man, you decide to turn him down and go your own way.")
+else:
+    print("Please choose Yes or No.")
