@@ -2,6 +2,7 @@
 Created September 27, 2023. Version 1. Author: Sabrina Spruck"""
 
 # Below is practice:
+import math
 
 # Lesson 1: Printing in the console with Python
 print("Hello World!")
@@ -312,6 +313,7 @@ print(withWalrus := "This can be called together, with the assignment.")
 # Lesson 4: Operators
 
 # If statement
+
 number = int(input("Please type the number 3: "))
 if number == 3:
     print("Good job.")
@@ -359,3 +361,67 @@ elif yesOrNo == "No":
     print("Creeped out by the man, you decide to turn him down and go your own way.")
 else:
     print("Please choose Yes or No.")
+
+# Using the math module; imported at the top
+#     Constants
+#          showing and using pi
+print(math.pi)
+
+
+def circle_area(radius):
+    return math.pi*radius**2
+
+
+print("Area of the circle =", circle_area(3))
+
+#          showing and using Tau (2π or τ) which is useful for angular measurements
+print(math.tau)
+
+
+def circle_circum(radius):
+    return math.tau*radius
+
+
+print("Circumference of the circle =", circle_circum(3))
+
+#          showing and using Euler's number (e) which is useful for problems involving exponential growth and decay
+print(math.e)
+
+
+def comp_interest(pv, r, t):
+    return pv*math.e**(r*t)
+
+
+print("If you start with $1000 paying 2% interest with continuous compounding, after 3 years it would be: ", comp_interest(1000, .02, 3))
+
+#          showing and using Not a Number (nan) which is useful for
+print(math.nan)
+#          Data type of math.nan is float, but it's not considered a valid number
+print(type(math.nan))
+#          showing and using positive and negative floating-point infinity constants
+print(math.inf)
+print(-math.inf)
+
+#     Functions
+#          Number Functions
+#               math.ceil()
+#               math.floor()
+#               math.factorial()
+#               math.gcd()
+#               math.fabs()
+#          Power and Logarithmic Functions
+#               math.pow()
+#               math.exp()
+#               math.sqrt()
+#               math.log()
+#          Trigonometric Functions
+#               math.sin()
+#               math.cos()
+#               math.tan()
+#          Hyperbolic Functions
+#               math.cosh(x) - hyperbolic cosine
+#               math.sinh(x) - hyperbolic sine
+#               math.tanh(x) - hyperbolic tangent
+#               math.acosh(x) - inverse hyperbolic cosine
+#               math.asinh(x) - inverse hyperbolic sine
+#               math.atanh(x) - inverse hyperbolic tangent
