@@ -69,6 +69,7 @@ print(type(4 > 6))
 print(type(True))
 print(type(False))
 
+"""
 # using the function: input()
 username = input("Please enter your name:")
 print(username)
@@ -87,6 +88,7 @@ print(type(dogAge))
 dogAgeAsInt = int(input("Please enter your dog's age:"))
 print(dogAgeAsInt)
 print(type(dogAgeAsInt))
+"""
 
 # Lesson 3: Operators
 
@@ -314,6 +316,7 @@ print(withWalrus := "This can be called together, with the assignment.")
 
 # If statement
 
+"""
 number = int(input("Please type the number 3: "))
 if number == 3:
     print("Good job.")
@@ -361,6 +364,7 @@ elif yesOrNo == "No":
     print("Creeped out by the man, you decide to turn him down and go your own way.")
 else:
     print("Please choose Yes or No.")
+"""
 
 # Using the math module; imported at the top
 #     Constants
@@ -394,30 +398,75 @@ def comp_interest(pv, r, t):
 
 print("If you start with $1000 paying 2% interest with continuous compounding, after 3 years it would be: ", comp_interest(1000, .02, 3))
 
-#          showing and using Not a Number (nan) which is useful for
+#          showing and using Not a Number (nan) which is useful for representing missing or unknown numbers; not equal to 0
 print(math.nan)
+
+maryAge = 10
+paulAge = 21
+bobAge = math.nan
+suzyAge = 50
+
+
+def halved_age(age):
+    return age/2
+
+
+print("Mary's age when halved is: ", halved_age(maryAge))
+print("Paul's age when halved is: ", halved_age(paulAge))
+print("Bob's age when halved is: ", halved_age(bobAge))
+print("Suzy's age when halved is: ", halved_age(suzyAge))
+
 #          Data type of math.nan is float, but it's not considered a valid number
 print(type(math.nan))
-#          showing and using positive and negative floating-point infinity constants
+
+#          showing and using positive and negative floating-point infinity constants for numbers that approach infinity
 print(math.inf)
 print(-math.inf)
+toFrontDoorFeet = 10
+toWalmartFeet = 7920
+toEdgeOfUniverseFeet = math.inf
+toMyAtomsFeet = -math.inf
+print(toWalmartFeet - toFrontDoorFeet)
+print(toFrontDoorFeet * toEdgeOfUniverseFeet)
+print(toWalmartFeet + toMyAtomsFeet)
+print(toEdgeOfUniverseFeet > toMyAtomsFeet)
+print(toEdgeOfUniverseFeet < toWalmartFeet)
+print(toMyAtomsFeet < toWalmartFeet)
 
 #     Functions
 #          Number Functions
-#               math.ceil()
-#               math.floor()
-#               math.factorial()
-#               math.gcd()
-#               math.fabs()
+#               math.ceil() - rounds up
+print(math.ceil(9.1203))
+#               math.floor() - rounds down
+print(math.floor(9.1203))
+#               math.factorial() - multiplies a number by every whole, positive number that comes before it
+print(math.factorial(6))
+#               math.gcd() - largest common divisor that divides the numbers without a remainder
+print(math.gcd(7, 10))
+print(math.gcd(10, 100))
+#               math.fabs() - returns absolute value of a number
+print(math.fabs(4))
+print(math.fabs(-4))
 #          Power and Logarithmic Functions
-#               math.pow()
-#               math.exp()
-#               math.sqrt()
-#               math.log()
+#               math.pow() - when (x, y) it returns x to the power of y
+print(math.pow(3, 3))
+#               math.exp(x) - Euler's number, risen to the power of x
+print(math.exp(1))
+print(math.exp(2))
+#               math.sqrt() - returns the square root of a number
+print(math.sqrt(9))
+print(math.sqrt(16))
+print(math.sqrt(25))
+#               math.log() - when (x, y) this returns the exponent that is required for y to become equal to x; so y^(returned#) = x; when a base isn't given, it uses Euler's number
+print(math.log(1000, 10))
+print(math.log(1000))
 #          Trigonometric Functions
-#               math.sin()
-#               math.cos()
-#               math.tan()
+#               math.sin() - how far above or below the center of a circle a point is; above the center is positive, below is negative
+
+#               math.cos() - how far to the left or right the center of a circle a point is; right to the center is positive, left is negative
+#
+#               math.tan() - slope of a line that intersects a curve at exactly one point
+
 #          Hyperbolic Functions
 #               math.cosh(x) - hyperbolic cosine
 #               math.sinh(x) - hyperbolic sine
