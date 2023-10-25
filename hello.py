@@ -366,7 +366,7 @@ else:
     print("Please choose Yes or No.")
 """
 
-# Using the math module; imported at the top
+# Lesson 5: Using the math module; imported at the top
 #     Constants
 #          showing and using pi
 print(math.pi)
@@ -462,15 +462,32 @@ print(math.log(1000, 10))
 print(math.log(1000))
 #          Trigonometric Functions
 #               math.sin() - how far above or below the center of a circle a point is; above the center is positive, below is negative
-
+print(math.sin(10))
 #               math.cos() - how far to the left or right the center of a circle a point is; right to the center is positive, left is negative
-#
+print(math.cos(10))
 #               math.tan() - slope of a line that intersects a curve at exactly one point
+print(math.tan(10))
 
-#          Hyperbolic Functions
-#               math.cosh(x) - hyperbolic cosine
-#               math.sinh(x) - hyperbolic sine
-#               math.tanh(x) - hyperbolic tangent
-#               math.acosh(x) - inverse hyperbolic cosine
-#               math.asinh(x) - inverse hyperbolic sine
-#               math.atanh(x) - inverse hyperbolic tangent
+# Lesson 6: Operations on Strings
+username = input("Please enter your name:")
+print("Hello,", username)
+
+bird = input("What's your favorite bird? ")
+whyBird = input("Why is that your favorite? ")
+print("My favorite bird is a(n) {}, because {}.".format(bird, whyBird))
+
+#     named indexes method
+fish = input("What's your favorite fish? ")
+whyFish = input("Why is that your favorite? ")
+print("My favorite fish is a(n) {favFish}, because {whyFavFish}.".format(favFish=fish, whyFavFish=whyFish))
+
+#     index value method
+mammal = input("What's your favorite mammal? ")
+whyMammal = input("Why is that your favorite? ")
+print("My favorite mammal is a(n) {0}, because {1}.".format(mammal, whyMammal))
+
+#     empty braces method
+manyAnimals = input("What's your favorite animal? ")
+animalAmount = input("How many would you want, if you could have as many as you want? ")
+print("My favorite animal is a(n) {}, and I would want {} of them.".format(manyAnimals, int(animalAmount)))
+
