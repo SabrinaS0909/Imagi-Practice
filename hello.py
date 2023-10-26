@@ -69,7 +69,6 @@ print(type(4 > 6))
 print(type(True))
 print(type(False))
 
-"""
 # using the function: input()
 username = input("Please enter your name:")
 print(username)
@@ -88,7 +87,6 @@ print(type(dogAge))
 dogAgeAsInt = int(input("Please enter your dog's age:"))
 print(dogAgeAsInt)
 print(type(dogAgeAsInt))
-"""
 
 # Lesson 3: Operators
 
@@ -313,20 +311,17 @@ print(withoutWalrus)
 print(withWalrus := "This can be called together, with the assignment.")
 
 # Lesson 4: Operators
-
-# If statement
-
-"""
+#     If statement
 number = int(input("Please type the number 3: "))
 if number == 3:
     print("Good job.")
-# If-else statement
+#     If-else statement
 favAnimal = input("What's your favorite animal?")
 if favAnimal == "dog":
     print("Me too!!!")
 else:
     print("Oh, that's cool I guess.")
-# If-elif-else statement
+#     If-elif-else statement
 activity = input("There's a lake for swimming, a tree that you can climb, or you can choose to go home. Which do you "
                  "decide to do?")
 if activity == "swim":
@@ -337,7 +332,7 @@ elif activity == "go home":
     print("You decide you're done with being outside, and go home.")
 else:
     print("Please choose one of the mentioned activities.")
-# Nested If-else statement
+#     Nested If-else statement
 yesOrNo = input("A shifty man approaches you and offers several things to buy off of him. Choose to say Yes or No.")
 if yesOrNo == "Yes":
     itemChoice = input("He asks with a gravely voice, 'What're ya buyin'?' He shows you a health potion, "
@@ -364,7 +359,6 @@ elif yesOrNo == "No":
     print("Creeped out by the man, you decide to turn him down and go your own way.")
 else:
     print("Please choose Yes or No.")
-"""
 
 # Lesson 5: Using the math module; imported at the top
 #     Constants
@@ -491,3 +485,15 @@ manyAnimals = input("What's your favorite animal? ")
 animalAmount = input("How many would you want, if you could have as many as you want? ")
 print("My favorite animal is a(n) {}, and I would want {} of them.".format(manyAnimals, int(animalAmount)))
 
+# Lesson 7: fStrings
+
+hairStyle = input("What style of hair do you have? Straight, wavy or curly? ")
+print(f"I love your {hairStyle} hair! How do you do that?")
+
+num1 = 5
+num2 = 10
+print(f"Five plus ten is {num1 + num2}")
+
+mainHandWeapon = input("Choose a main hand weapon: ")
+favElement = input("What's your favorite element, like water, fire, earth, etc? ")
+print(f"You head off on your adventure into the spooky forest, with your {favElement + mainHandWeapon} in hand.")
