@@ -401,8 +401,8 @@ bobAge = math.nan
 suzyAge = 50
 
 
-def halved_age(age):
-    return age/2
+def halved_age(age2):
+    return age2/2
 
 
 print("Mary's age when halved is: ", halved_age(maryAge))
@@ -485,7 +485,7 @@ manyAnimals = input("What's your favorite animal? ")
 animalAmount = input("How many would you want, if you could have as many as you want? ")
 print("My favorite animal is a(n) {}, and I would want {} of them.".format(manyAnimals, int(animalAmount)))
 
-# Lesson 7: fStrings
+# fStrings
 
 hairStyle = input("What style of hair do you have? Straight, wavy or curly? ")
 print(f"I love your {hairStyle} hair! How do you do that?")
@@ -497,3 +497,23 @@ print(f"Five plus ten is {num1 + num2}")
 mainHandWeapon = input("Choose a main hand weapon: ")
 favElement = input("What's your favorite element, like water, fire, earth, etc? ")
 print(f"You head off on your adventure into the spooky forest, with your {favElement + mainHandWeapon} in hand.")
+
+indexSpelling = "Spell Me!"
+print(indexSpelling[0])
+print(indexSpelling[1])
+print(indexSpelling[2])
+print(indexSpelling[3])
+print(indexSpelling[4])
+print(indexSpelling[5])
+print(indexSpelling[6])
+print(indexSpelling[7])
+print(indexSpelling[8])
+
+# String Slicing
+threeWordsInOne = "alteration"
+print("Middle Word: " + threeWordsInOne[4:7])
+print("Beginning Word: " + threeWordsInOne[:5])
+print("Ending Word: " + threeWordsInOne[4:])
+print("Middle Word with negative indexing: " + threeWordsInOne[-5:-2])
+print("Beginning Word with negative indexing: " + threeWordsInOne[:-4])
+print("Ending Word with negative indexing: " + threeWordsInOne[-4:])
